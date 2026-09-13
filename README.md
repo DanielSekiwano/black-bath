@@ -159,10 +159,11 @@ The app displays a map and retrieves turn-by-turn directions using the Mapbox AP
 The backend used for this app is serverless, so there is no need to run any sort of service before running the app, besides the initial AWS setup.
 
 ## **Team Members**
-This project was a group effort, created for the [University of Bristol COMS20006 Software Engineering Project](https://www.bristol.ac.uk/unit-programme-catalogue/UnitDetails.jsa?ayrCode=24%2F25&unitCode=COMS20006) by the following students:
+This project was a group effort, developed for the [University of Bristol COMS20006 Software Engineering Project](https://www.bristol.ac.uk/unit-programme-catalogue/UnitDetails.jsa?ayrCode=24%2F25&unitCode=COMS20006) by the following students:
 | Name             |
 | -------------    |
 | Daniel Sekiwano  |
 | Moksh Patel      |
 | Penghe Huang     |
 | Yuxiao Liu       |
+*Note: Source code is withheld in compliance with University of Bristol academic IP policies.*
