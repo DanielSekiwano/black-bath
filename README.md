@@ -14,7 +14,7 @@
 - [User stories](#user-stories)
 - [Key Features](#key-features)
 - [Project Structure](#project-structure)
-- [Architecture Diagram](#architecture-diagram)
+- [Architecture & System Design](#architecture--system-design)
 - [User Instructions](#user-instructions)
 - [Developer Instructions](#developer-instructions)
 - [Team Members](#team-members)
@@ -91,10 +91,15 @@ Here's some more information on each of the directories:
         └── test                      # Test files for the app
 ```
 ### Backend
-The backend is composed of the Mapbox API and AWS. For information on the backend, see our [Architecture Diagram](#architecture-diagram).
+The backend is composed of the Mapbox API and AWS. For information on the backend, see our [Architecture Diagram](#architecture--system-design).
 
-## **Architecture Diagram**
+## **Architecture & System Design**
 ![Architecture Diagram](./Docs/Resources/updatedDiagram.jpg)
+
+### Cloud Backend & Security Engineering
+* **API Key Obfuscation:** Mapbox Directions API calls are proxied through an AWS HTTP API Gateway connected to an AWS Lambda function (Python), hiding API credentials from client-side binary extraction.
+* **Abuse Prevention & Validation:** The Lambda middleware validates requested destination coordinates against a server-side whitelist before querying Mapbox, protecting against API quota abuse.
+* **Asset Hosting:** Audio recordings and static media assets are hosted on Amazon S3 buckets configured for public read access and streaming.
 
 ## **User Instructions**
 ### Black Bath Project User Guide
