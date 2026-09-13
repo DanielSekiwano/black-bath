@@ -1,6 +1,6 @@
 > [!NOTE]
-> Source code is withheld to comply with academic project guidelines and software IP protocols at the [**University of Bristol**](https://www.bristol.ac.uk/). This repository functions solely as a technical showcase detailing architecture and implementation strategy.
-# 2024-BlackBath
+> Source code is withheld to comply with academic project guidelines at the [**University of Bristol**](https://www.bristol.ac.uk/). This repository functions solely as a technical showcase detailing architecture and implementation strategy.
+# Black Histories in Bath
 [![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)](https://flutter.dev/)
 [![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)](https://dart.dev/)
 [![Python](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue)](https://www.python.org/)
@@ -16,7 +16,6 @@
 - [Project Structure](#project-structure)
 - [Architecture & System Design](#architecture--system-design)
 - [User Instructions](#user-instructions)
-- [Developer Instructions](#developer-instructions)
 - [Team Members](#team-members)
 ## **Project Overview & Description**
 The Black Bath project revolves around a mobile phone application for the general public to use in Bath. This app will act as a virtual walking tour in Bath, displaying sites of significance in Black History as waypoints on a map displayed within the app; each location will have associated audio files and descriptions, making the application more interactive and providing useful information about the history of the Black community in Bath.
@@ -41,7 +40,7 @@ Will be represented by past historical moments, which shall reflect on them toda
 ## **User Stories**
 * As a **member of the Black Community**, I would like to **view Black historical landmarks** to learn more about **the impact that Black people have had on Bath**, **economically and culturally**, in order to fully **appreciate** those who came here before me
 * As an **African International student in Bath**, I would like to **listen to stories** about the **positive aspects of Black History** in Bath, as opposed to the **negative focus**, particularly on slavery
-* As a **minority ethnic person**, I would like to **read more** about **the impact** that people in a **similar position** to me have had on Bath's **socioeconmic dynamic**, in order to fully appreciate the positive effect that different cultures can have
+* As a **minority ethnic person**, I would like to **read more** about **the impact** that people in a **similar position** to me have had on Bath's **socioeconomic dynamic**, in order to fully appreciate the positive effect that different cultures can have
 * As a **citizen in Bath**, I would like to **listen to longer interviews** gain a **better understanding** of **the role that Black people had** on my city's development and evolution
 * As a **member of the Bath City Council**, I would like to be able to **direct members of the community** to a resource where they can **learn more about Bath's history and how the Black community contributed to it**, to help them feel more welcome and **promote racial diversity**
 * As a **Social Scientist at the University of Bath**, I would like to **provide educational resources on the history of the Black community in Bath**, in a way that is **easily accessible** to most, in order to **promote racial diversity** in the city
@@ -84,7 +83,7 @@ Here's some more information on each of the directories:
         ├── assets                    # Images used in the app
         ├── ios                       # iOS config files
         ├── lib                       # Dart files - all app code in here
-        ├── macos                     # macos config files - only needed if developing for macos, ignore
+        ├── macos                     # macos config files
         ├── pubspec.lock              # Lock file for dependencies used in project, automatically generated/updated from pubspec.yaml when you run 'flutter pub get'
         ├── pubspec.yaml              # Yaml file that contains dependencies. You can manually edit this file to add dependencies (packages, plugins etc)
         └── test                      # Test files for the app
@@ -96,9 +95,19 @@ The backend is composed of the Mapbox API and AWS. For information on the backen
 ![Architecture Diagram](./Docs/Resources/updatedDiagram.jpg)
 
 ### Cloud Backend & Security Engineering
-* **API Key Obfuscation:** Mapbox Directions API calls are proxied through an AWS HTTP API Gateway connected to an AWS Lambda function (Python), hiding API credentials from client-side binary extraction.
-* **Abuse Prevention & Validation:** The Lambda middleware validates requested destination coordinates against a server-side whitelist before querying Mapbox, protecting against API quota abuse.
-* **Asset Hosting:** Audio recordings and static media assets are hosted on Amazon S3 buckets configured for public read access and streaming.
+#### **API Key Obfuscation:** 
+Mapbox Directions API calls are proxied through an AWS HTTP API Gateway connected to an AWS Lambda function (Python), which pulls the Mapbox access token from AWS Secrets before sending the request to Mapbox's API. This helps hide the token client-side binary extraction.
+
+> [!CAUTION]
+> There is a known issue with Mapbox tokens and Flutter; there must always be a token in the frontend code. This creates a vulnerability, as the token can be reverse engineered. For this reason, whenever building release versions of the .apk file, use the `flutter build apk --release --obfuscate --split-debug-info=debug-info/ --dart-define MAPBOX_ACCESS_TOKEN=your_access_token` command. The --obfuscate flag makes it more difficult to reverse engineer the code, which helps, but it is still not impossible; it simply requires more effort.
+>
+> Given the public nature of the application, token usage monitoring and periodic key rotation are recommended best practices.
+
+#### **Abuse Prevention & Validation:** 
+The Lambda middleware validates requested destination coordinates against a server-side whitelist before querying Mapbox, protecting against API quota abuse. This app cannot be used to make location requests to any arbitrary destination.
+
+#### **Asset Hosting:** 
+Audio recordings and static media assets are hosted on Amazon S3 buckets configured for public read access and streaming.
 
 ## **User Instructions**
 ### Black Bath Project User Guide
