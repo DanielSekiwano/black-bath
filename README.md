@@ -1,3 +1,5 @@
+> [!NOTE]
+> Source code is withheld to comply with academic project guidelines and software IP protocols at the [**University of Bristol**](https://www.bristol.ac.uk/). This repository functions solely as a technical showcase detailing architecture and implementation strategy.
 # 2024-BlackBath
 [![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)](https://flutter.dev/)
 [![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)](https://dart.dev/)
@@ -5,8 +7,6 @@
 [![Android Studio](https://img.shields.io/badge/Android_Studio-3DDC84?style=for-the-badge&logo=android-studio&logoColor=white)](https://developer.android.com/studio)
 [![Xcode](https://img.shields.io/badge/Xcode-007ACC?style=for-the-badge&logo=Xcode&logoColor=white)](https://developer.apple.com/xcode/)
 [![Amazon AWS](https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)](https://aws.amazon.com/)
-[![App Store](https://img.shields.io/badge/App_Store-0D96F6?style=for-the-badge&logo=app-store&logoColor=white)](https://apps.apple.com/gb/app/marine-conservation-app/id6477784808)
-[![Google Play](https://img.shields.io/badge/Google_Play-414141?style=for-the-badge&logo=google-play&logoColor=white)](https://play.google.com/store)
 
 ## Contents
 - [Project Overview](#project-overview--description) 
@@ -100,9 +100,9 @@ The backend is composed of the Mapbox API and AWS. For information on the backen
 ### Black Bath Project User Guide
 * Welcome to Black Histories in Bath, an **interactive app** to help you explore **Black History** in Bath. This project has been developed by representatives of the University of Bath in collaboration with students, with the aim of providing a rich historical context and cultural experience for all visitors to Bath.
 ### Visit the app
-Download via the Apple Store or the Google Play Store!
+Download via the Apple Store or the [Google Play Store](https://play.google.com/store/apps/details?id=com.blackbath.app&pli=1)!
 > [!NOTE]
-> This app is designed to run on mobile devices. Running the app on larger screens, such as iPads and Tablets, may cause unexpected formatting issues.
+> This app is currently only available on the Google Play Store, likely due to an unrestored license on the Apple Store from the University of Bath.
 ### Choose your guided tour route
 * On the home page you can select one of the different themed routes. Each route will take you to landmarks and places associated with black history in Bath.
 * **Cultural landmarks**: explore buildings and monuments associated with black culture.
@@ -115,48 +115,6 @@ Download via the Apple Store or the Google Play Store!
 ### Cautions
 * Compatible devices: Android, iOS
 * Privacy and data security: We use current location services to accurately guide you through the tour. None of this data is stored.
-### Contact Us
-* If you have any questions or suggestions, please get in touch with us via the Contact Us page. We would love to hear your feedback and continue to improve the platform to provide a better experience.
-
-## **Developer Instructions**
-### Prerequisites
-- Latest version of the [`Flutter SDK`](https://docs.flutter.dev/get-started/install)
-- A suitable IDE, e.g. [Android Studio](https://developer.android.com/studio) (Recommended), [VSCode](https://code.visualstudio.com/), [Intellij IDEA](https://www.jetbrains.com/idea/) etc
-- Must have a Flutter plugin/extension installed to run the Flutter framework, which is available for all suitable IDEs
-- Android Emulator ([see below](#to-run-on-android)) or iOS Simulator ([see below](#to-run-on-ios))
-- (Optional) Physical Android or iOS phone ([see below](#to-run-on-physical-device))
-
-#### To run on Android
-- Latest version of [`Android SDK and Build Tools`](https://developer.android.com/tools/releases/build-tools)
-- Latest version of [`Java Development Kit (JDK)`](https://www.oracle.com/java/technologies/javase-jdk8-downloads.html)
-- Follow [this guide](https://developer.android.com/studio/run/emulator) to run the app on an emulator
-- Follow [this guide](https://developer.android.com/studio/run/device) to run the app on a physical Android device
-
-#### To run on iOS
-> [!IMPORTANT]
-> This is exclusive to macOS users, as you must be able to run XCode
-
-Follow the [guide](https://docs.flutter.dev/get-started/install/macos/mobile-ios) to install:
-- XCode
-- CocoaPods
-- Simulator
-
-#### Running the Flutter project
-- Install all the dependencies using `flutter pub get`
-- Use the command `flutter run --dart-define MAPBOX_ACCESS_TOKEN=your_access_token`
-- Retrieve your token by following the instructions [below](#mapbox)
-
-### Backend
-#### Mapbox
-The app displays a map and retrieves turn-by-turn directions using the Mapbox API, which requires an access token.
-> [!WARNING]
-> Make sure to monitor your token usage, specifically for the Directions API (turn-by-turn directions) and Maps SDK (displays the map).
-> 
-> The Directions API has a free-tier limit of 100,000 requests per month, and the Maps SDK has a free-tier limit of 25,000 users. Monitor the usage mainly of the Directions API, to detect foul play e.g. if someone is abusing the token, which can be retrieved from the app with some effort, an open issue with Mapbox tokens.
->
-> If you suspect foul play, you will have to delete/disable the retrieved token, and release a new version of the app with another token.
-#### AWS
-The backend used for this app is serverless, so there is no need to run any sort of service before running the app, besides the initial AWS setup.
 
 ## **Team Members**
 This project was a group effort, developed for the [University of Bristol COMS20006 Software Engineering Project](https://www.bristol.ac.uk/unit-programme-catalogue/UnitDetails.jsa?ayrCode=24%2F25&unitCode=COMS20006) by the following students:
@@ -166,5 +124,3 @@ This project was a group effort, developed for the [University of Bristol COMS20
 | Moksh Patel      |
 | Penghe Huang     |
 | Yuxiao Liu       |
-
-*Note: Source code is withheld in compliance with University of Bristol academic IP policies.*
