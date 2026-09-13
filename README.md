@@ -58,7 +58,6 @@ Will be represented by past historical moments, which shall reflect on them toda
 * Usability is key
 #### Audio Files
 * 4-5 minute audio descriptions of historical events at each waypoint
-* Option at some waypoints to play longer audio interview (~30 mins)
 * Transcripts of the audio for accessibility
 #### Accessible by Public
 * As a stakeholder, general public need access to the app
