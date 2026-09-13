@@ -65,19 +65,13 @@ Will be represented by past historical moments, which shall reflect on them toda
 * Must be launched on the App Store and Google Play store to reach most audiences
 
 ## **Project Structure**
-> [!NOTE]
-> This is a basic overview of the project structure, focusing on the general aspects of the Flutter project. A more detailed breakdown of the project structure can be found in the [Handover Document](./Docs/Handover.md).
 ### Root Level
 ```
 .
-├── .github                   # Workflows and templates
-├── Docs                      # Client meetings and other documents
-├── LICENSE                   # License used for repo 
+├── Docs                      # Project documents
 ├── README.md                 # README, contains project info
 └── src/BlackBathApp          # Code files                
 ```
-### Github Actions and Templates
-Workflows (CI/CD) and templates (issue templates, pull request templates) can be found in [`.github`](./.github).
 ### Frontend
 All frontend code can be found under [`src/BlackBathApp`](./src/BlackBathApp).
 Here's some more information on each of the directories:
@@ -94,11 +88,10 @@ Here's some more information on each of the directories:
         ├── macos                     # macos config files - only needed if developing for macos, ignore
         ├── pubspec.lock              # Lock file for dependencies used in project, automatically generated/updated from pubspec.yaml when you run 'flutter pub get'
         ├── pubspec.yaml              # Yaml file that contains dependencies. You can manually edit this file to add dependencies (packages, plugins etc)
-        ├── test                      # Test files for the app
-        └── web                       # web config files - only needed if developing for web, ignore
+        └── test                      # Test files for the app
 ```
 ### Backend
-The backend is composed of the Mapbox API and AWS. For information on the backend, see our [Architecture Diagram](#architecture-diagram) and the [Handover Document](./Docs/Handover.md#Backend).
+The backend is composed of the Mapbox API and AWS. For information on the backend, see our [Architecture Diagram](#architecture-diagram).
 
 ## **Architecture Diagram**
 ![Architecture Diagram](./Docs/Resources/updatedDiagram.jpg)
@@ -153,25 +146,9 @@ Follow the [guide](https://docs.flutter.dev/get-started/install/macos/mobile-ios
 - Use the command `flutter run --dart-define MAPBOX_ACCESS_TOKEN=your_access_token`
 - Retrieve your token by following the instructions [below](#mapbox)
 
-#### Cloning the Repository
-Clone the repository using either:
-- `git clone https://github.com/spe-uob/2024-BlackBath.git` (HTTPS)
-- or `git clone git@github.com:spe-uob/2024-BlackBath.git` (SSH)
-
-### Running Latest Version without Code
-> [!IMPORTANT]
-> This only works for Android, as .apk files can be easily installed and used on Android devices
-#### Android
-1. Navigate to Github Actions for this repository
-2. Select "Continuous Delivery - Trigger on Merge..."
-3. Select the most recent CD run
-4. Clicking the artifact at the bottom of the page (.apk file) should begin a download of the most recent stable version
-5. When complete, click the download to install the app on an Android device
-6. Once installed, click the app logo to run it!
-
 ### Backend
 #### Mapbox
-The app displays a map and retrieves turn-by-turn directions using the Mapbox API, which requires an access token. Follow the detailed steps in the [Handover Document](./Docs/Handover.md#Mapbox) to set up a Mapbox account and retrieve tokens.
+The app displays a map and retrieves turn-by-turn directions using the Mapbox API, which requires an access token.
 > [!WARNING]
 > Make sure to monitor your token usage, specifically for the Directions API (turn-by-turn directions) and Maps SDK (displays the map).
 > 
@@ -179,13 +156,13 @@ The app displays a map and retrieves turn-by-turn directions using the Mapbox AP
 >
 > If you suspect foul play, you will have to delete/disable the retrieved token, and release a new version of the app with another token.
 #### AWS
-The backend used for this app is serverless, so there is no need to run any sort of service before running the app, besides the initial setup.
-For the initial AWS setup, see the detailed steps in the [Handover Document](./Docs/Handover.md#AWS).
+The backend used for this app is serverless, so there is no need to run any sort of service before running the app, besides the initial AWS setup.
 
 ## **Team Members**
-| Name             |   Email ID    |
-| -------------    | ------------- |
-| Daniel Sekiwano  | zh23995       |
-| Moksh Patel      | oc22442       |
-| Penghe Huang     | va22290       |
-| Yuxiao Liu       | ig22046       |
+This project was a group effort, created for the [University of Bristol COMS20006 Software Engineering Project](https://www.bristol.ac.uk/unit-programme-catalogue/UnitDetails.jsa?ayrCode=24%2F25&unitCode=COMS20006) by the following students:
+| Name             |
+| -------------    |
+| Daniel Sekiwano  |
+| Moksh Patel      |
+| Penghe Huang     |
+| Yuxiao Liu       |
