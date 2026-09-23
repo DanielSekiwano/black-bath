@@ -1,5 +1,6 @@
 > [!NOTE]
 > Source code is withheld to comply with academic project guidelines at the [**University of Bristol**](https://www.bristol.ac.uk/). This repository functions solely as a technical showcase detailing architecture and implementation strategy.
+
 # Black Histories in Bath
 [![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)](https://flutter.dev/)
 [![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)](https://dart.dev/)
@@ -9,6 +10,7 @@
 [![Amazon AWS](https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)](https://aws.amazon.com/)
 
 ## Contents
+- [Team Members](#team-members)
 - [Project Overview](#project-overview--description) 
 - [Stakeholders](#stakeholders) 
 - [User stories](#user-stories)
@@ -16,7 +18,16 @@
 - [Project Structure](#project-structure)
 - [Architecture & System Design](#architecture--system-design)
 - [User Instructions](#user-instructions)
-- [Team Members](#team-members)
+  
+## **Team Members**
+This project was a group effort, developed for the [University of Bristol COMS20006 Software Engineering Project](https://www.bristol.ac.uk/unit-programme-catalogue/UnitDetails.jsa?ayrCode=24%2F25&unitCode=COMS20006) by the following students:
+| Name             |
+| -------------    |
+| Daniel Sekiwano  |
+| Moksh Patel      |
+| Penghe Huang     |
+| Yuxiao Liu       |
+
 ## **Project Overview & Description**
 The Black Bath project revolves around a mobile phone application for the general public to use in Bath. This app will act as a virtual walking tour in Bath, displaying sites of significance in Black History as waypoints on a map displayed within the app; each location will have associated audio files and descriptions, making the application more interactive and providing useful information about the history of the Black community in Bath.
 
@@ -128,12 +139,3 @@ Download via the Apple Store or the [Google Play Store](https://play.google.com/
 ### Cautions
 * Compatible devices: Android, iOS
 * Privacy and data security: We use current location services to accurately guide you through the tour. None of this data is stored.
-
-## **Team Members**
-This project was a group effort, developed for the [University of Bristol COMS20006 Software Engineering Project](https://www.bristol.ac.uk/unit-programme-catalogue/UnitDetails.jsa?ayrCode=24%2F25&unitCode=COMS20006) by the following students:
-| Name             |
-| -------------    |
-| Daniel Sekiwano  |
-| Moksh Patel      |
-| Penghe Huang     |
-| Yuxiao Liu       |
