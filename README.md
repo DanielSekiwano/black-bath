@@ -1,6 +1,3 @@
-> [!NOTE]
-> Source code is withheld to comply with academic project guidelines at the [**University of Bristol**](https://www.bristol.ac.uk/). This repository functions solely as a technical showcase detailing architecture and implementation strategy.
-
 # Black Histories in Bath
 [![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)](https://flutter.dev/)
 [![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)](https://dart.dev/)
@@ -8,6 +5,9 @@
 [![Android Studio](https://img.shields.io/badge/Android_Studio-3DDC84?style=for-the-badge&logo=android-studio&logoColor=white)](https://developer.android.com/studio)
 [![Xcode](https://img.shields.io/badge/Xcode-007ACC?style=for-the-badge&logo=Xcode&logoColor=white)](https://developer.apple.com/xcode/)
 [![Amazon AWS](https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)](https://aws.amazon.com/)
+
+> [!NOTE]
+> Source code is withheld to comply with academic project guidelines at the [**University of Bristol**](https://www.bristol.ac.uk/). This repository functions solely as a technical showcase detailing architecture and implementation strategy.
 
 ## Contents
 - [Team Members](#team-members)
