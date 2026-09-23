@@ -124,9 +124,9 @@ Audio recordings and static media assets are hosted on Amazon S3 buckets configu
 ### Black Bath Project User Guide
 * Welcome to Black Histories in Bath, an **interactive app** to help you explore **Black History** in Bath. This project has been developed by representatives of the University of Bath in collaboration with students, with the aim of providing a rich historical context and cultural experience for all visitors to Bath.
 ### Visit the app
-Download via the Apple Store or the [Google Play Store](https://play.google.com/store/apps/details?id=com.blackbath.app&pli=1)!
+Download via the Apple Store or the Google Play Store!
 > [!NOTE]
-> This app is currently only available on the Google Play Store, likely due to an unrestored license on the Apple Store from the University of Bath.
+> **Project Status:** This application was successfully built, cloud-deployed to AWS, and fielded to a live audience of 50+ active users in Bath, UK (2024–2025). The live app store listings and cloud endpoints have since been decommissioned by the owner. The app is titled "Black Histories in Bath", see an article [here](https://www.devstud.org.uk/2025/06/13/black-histories-in-bath-a-new-walking-tour-app/).
 ### Choose your guided tour route
 * On the home page you can select one of the different themed routes. Each route will take you to landmarks and places associated with black history in Bath.
 * **Cultural landmarks**: explore buildings and monuments associated with black culture.
